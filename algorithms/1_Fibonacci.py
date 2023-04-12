@@ -1,17 +1,9 @@
-# Рекурсивно (мой вариант)
-# F1 = 0
-# F2 = 1
-# n = 20
-#
-# def fib(n:int)->int:
-#    if n == 0:
-#        return F1
-#    elif n == 1:
-#        return F2
-#    else:
-#        return fib(n-1) + fib(n-2)
-#
-# print(fib(n))
+'''
+p.17
+
+7 -> 13
+8 -> 21
+'''
 
 n = int(input('Введите число: '))
 f = [0, 1]
