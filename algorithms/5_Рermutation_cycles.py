@@ -1,3 +1,10 @@
+'''
+р.23
+
+1 3 2 -> 2
+2 3 4 1  -> 1
+'''
+
 perm = [i - 1 for i in map(int, input().split())]
 
 visited = [False] * len(perm)
