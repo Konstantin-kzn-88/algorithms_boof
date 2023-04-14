@@ -5,9 +5,9 @@ import matplotlib.pyplot as plt
 
 df = pd.read_excel('при 500 м2.xls')
 val = df.values[:,1:].T
-val[val < 1e-3] = 0.01
+# val[val < 1e-3] = 0.01
 plt.figure(figsize=(10,10))
-plt.imshow(val, cmap='jet', interpolation = 'bicubic', vmax=0.1)
+plt.imshow(val, cmap='jet', interpolation = 'bicubic')
 X, Y = np.meshgrid(range(df.shape[1]), range(df.shape[0]-1))
 Z = val
 plt.colorbar()
