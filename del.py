@@ -1,16 +1,21 @@
-n = int(input("Введите количество друзей: "))
-friends = []
+def search_max(s):
+    'Поик наибольшего слова'
+    ans = ''
+    for i in s:
+        if len(i) > len(ans):
+            ans = i
+    return ans
 
-for i in range(n):
-    friends.append({'Name': input('Имя:'), 'Age': int(input('Возраст:'))})
-    print('*'*20)
 
-min_age = min([int(list(i.values())[-1]) for i in friends])
+def search_min(s):
+    'Поик наименьшего слова'
+    ans = ''
+    for i in s:
+        if len(i) <= max(map(len, s)):
+            ans = i
+    return ans
 
-for i in friends:
-    name, age = i.items()
-    if age[-1] == min_age:
-        print(name[-1])
 
-if __name__ == '__main__':
-    pass
+s = tuple(i for i in input().split())
+print('max: ', search_max(s))
+print('min: ', search_min(s))
